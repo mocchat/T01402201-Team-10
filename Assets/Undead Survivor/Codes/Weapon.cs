@@ -15,11 +15,8 @@ public class Weapon : MonoBehaviour
     Player player;
 
     void Awake() {
-        player = GetComponentInParent<Player>();
-    }
-
-    void Start() {
-        Init();
+        // Awake 함수에서의 플레이어 초기화는 게임 매니저 활용으로 변경
+        player = GameManager.instance.player;
     }
 
     // Update is called once per frame
@@ -50,18 +47,53 @@ public class Weapon : MonoBehaviour
 
         if (id == 0)
             Batch();
+
+        player.BroadcastMessage("ApplyGear", SendMessageOptions.DontRequireReceiver);
     }
 
-    public void Init() {
+    public void Init(ItemData data) {
+        // 스크립트블 오브젝트의 독립성을 위해서 인덱스가 아닌 프리펩으로 설정
+
+        //basic Set
+        name = "Weapon " + data.itemId;
+        transform.parent = player.transform;
+        transform.localPosition = Vector3.zero;
+
+
+        //Property Set
+        id = data.itemId;
+        damage = data.baseDamage;
+        count = data.baseCount;
+
+        for (int index = 0; index < GameManager.instance.pool.prefabs.Length; index++)
+        {
+            if ( data.projectile == GameManager.instance.pool.prefabs[index])
+            {
+                prefabId = index;
+                break;
+            }
+        }
+
+
         switch (id) {
             case 0:
                 speed = 150;
                 Batch();
                 break;
             default:
-                speed = 0.3f;
+                speed = 0.4f;
                 break;
         }
+
+        // Hand Set
+        Hand hand = player.hands[(int)data.itemType];
+        hand.spriter.sprite = data.hand;
+        hand.gameObject.SetActive(true);
+
+
+
+        //BroadcastMessage : 특정 함수 호출을 모든 자식에게 방송하는 함수
+        player.BroadcastMessage("ApplyGear", SendMessageOptions.DontRequireReceiver);
     }
 
     void Batch() {
