@@ -13,7 +13,8 @@ public class Item : MonoBehaviour
 
     Image icon;
     Text textLevel;
-
+    Text textName;
+    Text textDesc;
     void Awake()
     {
         icon = GetComponentsInChildren<Image>()[1];
@@ -21,13 +22,32 @@ public class Item : MonoBehaviour
 
         Text[] texts = GetComponentsInChildren<Text>();
         textLevel = texts[0];
+        textName = texts[1];
+        textDesc = texts[2];
+        textName.text = data.itemName;
     }
 
-    private void LateUpdate()
+    void OnEnable()
     {
         textLevel.text = "Lv." + (level + 1);
 
+        switch (data.itemType)     // 아이템 타입에 따라 switch case문으로 로직 분리
+        {
+            case ItemData.ItemType.Melee:
+            case ItemData.ItemType.Range:
+                textDesc.text = string.Format(data.itemDesc, data.damages[level] * 100, data.counts[level]);  // 데미지 상승을 보여줄 땐 곱하기 100
+                break;
+            case ItemData.ItemType.Glove:
+            case ItemData.ItemType.Shoe:
+                textDesc.text = string.Format(data.itemDesc, data.damages[level] * 100);
+                break;
+            default:
+                textDesc.text = string.Format(data.itemDesc);
+                break;
+        }
     }
+
+
 
     public void OnClick()
     {
