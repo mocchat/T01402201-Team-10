@@ -45,7 +45,7 @@ public class Weapon : MonoBehaviour
     }
 
     public void LevelUp(float damage, int count) {
-        this.damage = damage;
+        this.damage = damage * Character.Damage;
         this.count += count;
 
         if (id == 0)
@@ -65,8 +65,8 @@ public class Weapon : MonoBehaviour
 
         //Property Set
         id = data.itemId;
-        damage = data.baseDamage;
-        count = data.baseCount;
+        damage = data.baseDamage * Character.Damage;
+        count = data.baseCount + Character.Count;
 
         for (int index = 0; index < GameManager.instance.pool.prefabs.Length; index++)
         {
@@ -80,11 +80,11 @@ public class Weapon : MonoBehaviour
 
         switch (id) {
             case 0:
-                speed = 150;
+                speed = 150 * Character.WeaponSpeed;
                 Batch();
                 break;
             default:
-                speed = 0.4f;
+                speed = 0.5f * Character.WeaponRate;
                 break;
         }
 
@@ -117,7 +117,7 @@ public class Weapon : MonoBehaviour
             bullet.Rotate(rotVec);
             bullet.Translate(bullet.up * 1.5f, Space.World);
 
-            bullet.GetComponent<Bullet>().Init(damage, -1, Vector3.zero); // -1 은 무한 관통
+            bullet.GetComponent<Bullet>().Init(damage, -100, Vector3.zero); // -100 은 무한 관통
         }
     }
     void Fire() {
@@ -134,5 +134,6 @@ public class Weapon : MonoBehaviour
         bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir); // FromToRotation: 지정된 축을 중심으로 목표를 향해 회전하는 함수
         bullet.GetComponent<Bullet>().Init(damage, count, dir);
 
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Range);
     }
 }

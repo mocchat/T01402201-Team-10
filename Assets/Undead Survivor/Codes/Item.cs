@@ -75,7 +75,7 @@ public class Item : MonoBehaviour
                 break;
             case ItemData.ItemType.Glove:
             case ItemData.ItemType.Shoe:
-                if ( level == 0)
+                if (level == 0)
                 {
                     GameObject newGear = new GameObject();
                     gear = newGear.AddComponent<Gear>();
