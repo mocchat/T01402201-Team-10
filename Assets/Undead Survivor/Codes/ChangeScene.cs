@@ -21,6 +21,9 @@ public class ChangeScene : MonoBehaviour
             case "CaveMap":
                 SceneManager.LoadScene("CaveGameScene");
                 break;
+            case "SwampMap":
+                SceneManager.LoadScene("SwampGameScene");
+                break;
                 // case " Option":
                 //      SceneManager.LoadScene();
                 //   break;

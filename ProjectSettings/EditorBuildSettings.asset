@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CaveGameScene.unity
     guid: 962e0b6eddc8e2540a7d457fa4ffc7fb
+  - enabled: 1
+    path: Assets/Scenes/SwampGameScene.unity
+    guid: 2e285696b833e2d40aa89236fd2af2bc
   m_configObjects: {}

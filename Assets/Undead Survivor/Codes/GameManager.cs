@@ -26,6 +26,11 @@ public class GameManager : MonoBehaviour
     public LevelUp uiLevelUp;
     public Result uiResult;
     public GameObject enemyCleaner;
+    //swamp 추가 다른 맵에는 dummy_swamp로 설정
+    public Swamp swamp;
+    public Swamp swamp1;
+    public Swamp swamp2;
+    public Swamp swamp3;
 
     void Awake()
     {

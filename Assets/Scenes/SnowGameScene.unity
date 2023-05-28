@@ -2172,7 +2172,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 7.5
+  orthographic size: 10.138889
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2980,6 +2980,10 @@ MonoBehaviour:
   uiLevelUp: {fileID: 577810945}
   uiResult: {fileID: 706016085}
   enemyCleaner: {fileID: 1498680334}
+  swamp: {fileID: 1128505022}
+  swamp1: {fileID: 1128505022}
+  swamp2: {fileID: 1128505022}
+  swamp3: {fileID: 1128505022}
 --- !u!4 &692023134
 Transform:
   m_ObjectHideFlags: 0
@@ -5166,6 +5170,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106145272}
   m_CullTransparentMesh: 1
+--- !u!1 &1128505020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1128505021}
+  - component: {fileID: 1128505022}
+  m_Layer: 0
+  m_Name: Dummy_Swamp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1128505021
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128505020}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1604773806}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1128505022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128505020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d787b7f17df606468c578b2dd478415, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player_speed: 0
+  true_speed: 0
 --- !u!1 &1129877833
 GameObject:
   m_ObjectHideFlags: 0
@@ -7414,6 +7464,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6fee13a7329fd2d4db5d854feab345b9, type: 3}
+--- !u!4 &1604773806 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8977213640053379625, guid: 6fee13a7329fd2d4db5d854feab345b9, type: 3}
+  m_PrefabInstance: {fileID: 1604773805}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1612413982
 GameObject:
   m_ObjectHideFlags: 3

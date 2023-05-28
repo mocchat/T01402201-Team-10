@@ -2008,7 +2008,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 7.5
+  orthographic size: 10.138889
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2652,6 +2652,10 @@ MonoBehaviour:
   uiLevelUp: {fileID: 577810945}
   uiResult: {fileID: 706016085}
   enemyCleaner: {fileID: 1498680334}
+  swamp: {fileID: 2010576263}
+  swamp1: {fileID: 2010576263}
+  swamp2: {fileID: 2010576263}
+  swamp3: {fileID: 2010576263}
 --- !u!4 &692023134
 Transform:
   m_ObjectHideFlags: 0
@@ -8895,6 +8899,52 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &2010576262
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2010576264}
+  - component: {fileID: 2010576263}
+  m_Layer: 0
+  m_Name: Dummy_Swamp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &2010576263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010576262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d787b7f17df606468c578b2dd478415, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player_speed: 0
+  true_speed: 0
+--- !u!4 &2010576264
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010576262}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8018047885804100355}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2017553217
 GameObject:
   m_ObjectHideFlags: 0
@@ -9667,3 +9717,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8228216902b0b5e43b4405d9c6eb5ac5, type: 3}
+--- !u!4 &8018047885804100355 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8018047885877801764, guid: 8228216902b0b5e43b4405d9c6eb5ac5, type: 3}
+  m_PrefabInstance: {fileID: 8018047885804100354}
+  m_PrefabAsset: {fileID: 0}

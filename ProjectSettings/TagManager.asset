@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Bullet
   - Cave
+  - Swamp
   layers:
   - Default
   - TransparentFX

@@ -29,6 +29,15 @@ public class Player : MonoBehaviour
     {
         speed *= Character.Speed;
         anim.runtimeAnimatorController = animCon[GameManager.instance.playerId];
+        // swamp 속도 초기값 설정
+        GameManager.instance.swamp.player_speed = speed;
+        GameManager.instance.swamp1.player_speed = speed;
+        GameManager.instance.swamp2.player_speed = speed;
+        GameManager.instance.swamp3.player_speed = speed;
+        GameManager.instance.swamp.true_speed = speed;
+        GameManager.instance.swamp1.true_speed = speed;
+        GameManager.instance.swamp2.true_speed = speed;
+        GameManager.instance.swamp3.true_speed = speed;
     }
 
     void Update()
