@@ -18,6 +18,9 @@ public class ChangeScene : MonoBehaviour
             case "SnowMap":
                 SceneManager.LoadScene("SnowGameScene");
                 break;
+            case "CaveMap":
+                SceneManager.LoadScene("CaveGameScene");
+                break;
                 // case " Option":
                 //      SceneManager.LoadScene();
                 //   break;

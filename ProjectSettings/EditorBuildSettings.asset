@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SnowGameScene.unity
     guid: f9e3c01d142401c4888be1ccac91c1f6
+  - enabled: 1
+    path: Assets/Scenes/CaveGameScene.unity
+    guid: 962e0b6eddc8e2540a7d457fa4ffc7fb
   m_configObjects: {}
