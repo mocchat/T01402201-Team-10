@@ -123,22 +123,7 @@ public class GameManager : MonoBehaviour
             uiLevelUp.Show();
         }
     }
-    public void ApplyLavaEffectToPlayer()
-    {
-        Player player = FindObjectOfType <Player>();
-        if(player != null)
-        {
-            player.ApplyLavaEffect();
-        }
-    }
-    public void RemoveLavaEffectFromPlayer()
-    {
-        Player player = FindObjectOfType<Player>();
-        if (player != null)
-        {
-            
-        }
-    }
+
     public void TakeDamage(float damageAmount)//지속 데미지
     {
         if(!isLive) 

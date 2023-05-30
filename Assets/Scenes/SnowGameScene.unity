@@ -2023,6 +2023,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ae8e66301753d4ba311ac01585fb73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &473564477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 473564478}
+  - component: {fileID: 473564479}
+  m_Layer: 0
+  m_Name: Dummy_Lava
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &473564478
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473564477}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1604773806}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &473564479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 473564477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77fcdcd545064a46876f998128f85ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player_speed: 0
+  true_speed: 0
 --- !u!1 &516511447
 GameObject:
   m_ObjectHideFlags: 0
@@ -2172,7 +2218,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 10.138889
+  orthographic size: 8.166667
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2984,6 +3030,10 @@ MonoBehaviour:
   swamp1: {fileID: 1128505022}
   swamp2: {fileID: 1128505022}
   swamp3: {fileID: 1128505022}
+  lava0: {fileID: 473564479}
+  lava1: {fileID: 473564479}
+  lava2: {fileID: 473564479}
+  lava3: {fileID: 473564479}
 --- !u!4 &692023134
 Transform:
   m_ObjectHideFlags: 0
@@ -9126,6 +9176,7 @@ MonoBehaviour:
   - {fileID: 22100000, guid: 3200fe5116a2bdf459ce35c65a61b513, type: 2}
   - {fileID: 22100000, guid: 256b1aa26cc3afd47848a5dd6928c752, type: 2}
   - {fileID: 22100000, guid: 8f0f6d5cd530ebd4aa34dce181adaff9, type: 2}
+  isOnLava: 0
 --- !u!114 &1887836647
 MonoBehaviour:
   m_ObjectHideFlags: 0

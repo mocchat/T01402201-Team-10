@@ -40,7 +40,14 @@ public class Player : MonoBehaviour
         GameManager.instance.swamp1.true_speed = speed;
         GameManager.instance.swamp2.true_speed = speed;
         GameManager.instance.swamp3.true_speed = speed;
-
+        GameManager.instance.lava0.player_speed = speed;
+        GameManager.instance.lava1.player_speed = speed;
+        GameManager.instance.lava2.player_speed = speed;
+        GameManager.instance.lava3.player_speed = speed;
+        GameManager.instance.lava0.true_speed = speed;
+        GameManager.instance.lava1.true_speed = speed;
+        GameManager.instance.lava2.true_speed = speed;
+        GameManager.instance.lava3.true_speed = speed;
     }
 
 
@@ -102,17 +109,5 @@ public class Player : MonoBehaviour
         }
 
     }
-
-    public void SetSpeed()
-    {
-
-    }
-    public void ApplyLavaEffect()
-    {
-
-        Debug.Log("hot");
-        GameManager.instance.TakeDamage(0.2f);
-    }
-
 
 }

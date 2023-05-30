@@ -5,10 +5,11 @@ using UnityEngine;
 public class Lava : MonoBehaviour
 {
     private Player player; // Player 객체에 대한 참조를 저장할 변수
+    public float player_speed;
+    public float true_speed;
 
     private void Start()
     {
-
         player = FindObjectOfType<Player>(); // Player 객체를 찾아서 할당
     }
 
@@ -17,8 +18,12 @@ public class Lava : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Debug.Log("enter");
-            GameManager.instance.ApplyLavaEffectToPlayer();
 
+            Debug.Log("hot");
+            GameManager.instance.TakeDamage(0.2f);
+
+            true_speed = player_speed - 1.5f;
+            GameManager.instance.player.speed = true_speed;
         }
     }
 
@@ -27,8 +32,8 @@ public class Lava : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Debug.Log("exit");
-            GameManager.instance.RemoveLavaEffectFromPlayer();
-
+            true_speed = player_speed;
+            GameManager.instance.player.speed = player_speed;
         }
     }
 }
