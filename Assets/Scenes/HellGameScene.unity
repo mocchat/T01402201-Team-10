@@ -806,6 +806,52 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 19.3}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &266137586
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 266137587}
+  - component: {fileID: 266137588}
+  m_Layer: 0
+  m_Name: Dummy_Ice
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &266137587
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266137586}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4891753006026920493}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &266137588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 266137586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eaeac7ae7a149e49bb368ec4683a623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player_speed: 0
+  true_speed: 0
 --- !u!1 &267572763
 GameObject:
   m_ObjectHideFlags: 3
@@ -2577,7 +2623,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 8.166667
+  orthographic size: 7.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7583,6 +7629,7 @@ MonoBehaviour:
   - {fileID: 22100000, guid: 256b1aa26cc3afd47848a5dd6928c752, type: 2}
   - {fileID: 22100000, guid: 8f0f6d5cd530ebd4aa34dce181adaff9, type: 2}
   isOnLava: 0
+  isOnIce: 0
 --- !u!114 &1743375169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9386,6 +9433,10 @@ MonoBehaviour:
   lava1: {fileID: 566051239}
   lava2: {fileID: 1622224039}
   lava3: {fileID: 497037405}
+  ice1: {fileID: 266137588}
+  ice2: {fileID: 266137588}
+  ice3: {fileID: 266137588}
+  ice4: {fileID: 266137588}
 --- !u!4 &2108711962
 Transform:
   m_ObjectHideFlags: 0
@@ -9570,3 +9621,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 917d56227f2943149a10e9cd4487a4b7, type: 3}
+--- !u!4 &4891753006026920493 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4891753004139694270, guid: 917d56227f2943149a10e9cd4487a4b7, type: 3}
+  m_PrefabInstance: {fileID: 4891753006026920492}
+  m_PrefabAsset: {fileID: 0}

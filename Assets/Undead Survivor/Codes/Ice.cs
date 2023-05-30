@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lava : MonoBehaviour
+public class Ice : MonoBehaviour
 {
     private Player player; // Player 객체에 대한 참조를 저장할 변수
     public float player_speed;
@@ -12,9 +12,6 @@ public class Lava : MonoBehaviour
     {
         player = FindObjectOfType<Player>(); // Player 객체를 찾아서 할당
     }
- 
-
-
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -22,10 +19,10 @@ public class Lava : MonoBehaviour
         {
             Debug.Log("enter");
 
-            Debug.Log("hot");
-            GameManager.instance.TakeDamage(0.2f);
+            Debug.Log("Cold");
+            GameManager.instance.TakeDamage(2f);
 
-            true_speed = player_speed - 1.5f;
+            true_speed = player_speed + 5f;
             GameManager.instance.player.speed = true_speed;
         }
     }

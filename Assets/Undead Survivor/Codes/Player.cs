@@ -13,7 +13,8 @@ public class Player : MonoBehaviour
 
     //lava
     public bool isOnLava;
- 
+    public bool isOnIce;
+
     Rigidbody2D rigid;
     SpriteRenderer spriter;
     Animator anim;
@@ -48,6 +49,18 @@ public class Player : MonoBehaviour
         GameManager.instance.lava1.true_speed = speed;
         GameManager.instance.lava2.true_speed = speed;
         GameManager.instance.lava3.true_speed = speed;
+        GameManager.instance.ice1.player_speed = speed;
+        GameManager.instance.ice2.player_speed = speed;
+        GameManager.instance.ice3.player_speed = speed;
+        GameManager.instance.ice4.player_speed = speed;
+        GameManager.instance.ice1.true_speed = speed;
+        GameManager.instance.ice2.true_speed = speed;
+        GameManager.instance.ice3.true_speed = speed;
+        GameManager.instance.ice4.true_speed = speed;
+
+
+
+
     }
 
 

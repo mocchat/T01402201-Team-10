@@ -11,6 +11,8 @@ TagManager:
   - Cave
   - Swamp
   - Lava
+  - Ice
+  - Snow
   layers:
   - Default
   - TransparentFX

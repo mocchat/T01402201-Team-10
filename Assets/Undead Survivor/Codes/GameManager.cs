@@ -35,6 +35,11 @@ public class GameManager : MonoBehaviour
     public Lava lava1;
     public Lava lava2;
     public Lava lava3;
+    public Ice ice1;
+    public Ice ice2;
+    public Ice ice3;
+    public Ice ice4;
+
 
     void Awake()
     {
