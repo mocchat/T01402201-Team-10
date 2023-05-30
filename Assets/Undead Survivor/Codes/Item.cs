@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +11,7 @@ public class Item : MonoBehaviour
     public int level;
     public Weapon weapon;
     public Gear gear;
-
+    private Player player;
     Image icon;
     Text textLevel;
     Text textName;
@@ -47,7 +48,10 @@ public class Item : MonoBehaviour
         }
     }
 
-
+    private void Start()
+    {
+       player =  GameManager.instance.player;
+    }
 
     public void OnClick()
     {
@@ -87,7 +91,7 @@ public class Item : MonoBehaviour
                     gear.LevelUp(nextRate);
                 }
                 level++;
-
+        
                 break;
             case ItemData.ItemType.Heal:
                 GameManager.instance.health = GameManager.instance.maxHealth;

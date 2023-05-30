@@ -47,7 +47,6 @@ public class Reposition : MonoBehaviour
                 diffx = Mathf.Abs(diffx);
                 diffy = Mathf.Abs(diffy);
 
-
                 if (diffx > diffy)
                 {
                     transform.parent.Translate(Vector3.right * dirX * 40);

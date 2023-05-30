@@ -35,7 +35,6 @@ public class GameManager : MonoBehaviour
     public Lava lava1;
     public Lava lava2;
     public Lava lava3;
-    [SerializeField]private float lavaSpeedReduction = 1.5f;//Lava로 인한 속도 감소량
 
     void Awake()
     {
@@ -137,7 +136,7 @@ public class GameManager : MonoBehaviour
         Player player = FindObjectOfType<Player>();
         if (player != null)
         {
-            player.RemoveLavaEffect();
+            
         }
     }
     public void TakeDamage(float damageAmount)//지속 데미지
@@ -154,11 +153,7 @@ public class GameManager : MonoBehaviour
         }
 
     }
-    public float LavaSpeedReduction
-    {
-        get { return lavaSpeedReduction; }
-        set { lavaSpeedReduction = value; }
-    }
+
 
     // 레벨업시 시간정지
     public void Stop()

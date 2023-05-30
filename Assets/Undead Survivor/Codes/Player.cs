@@ -10,11 +10,10 @@ public class Player : MonoBehaviour
     public Scanner scanner;
     public Hand[] hands;
     public RuntimeAnimatorController[] animCon;
-    public float originalSpeed;
-    public float currentSpeed;
+
     //lava
     public bool isOnLava;
-
+ 
     Rigidbody2D rigid;
     SpriteRenderer spriter;
     Animator anim;
@@ -32,7 +31,7 @@ public class Player : MonoBehaviour
     {
         speed *= Character.Speed;
         anim.runtimeAnimatorController = animCon[GameManager.instance.playerId];
-        /* swamp 속도 초기값 설정
+        //swamp 속도 초기값 설정
         GameManager.instance.swamp.player_speed = speed;
         GameManager.instance.swamp1.player_speed = speed;
         GameManager.instance.swamp2.player_speed = speed;
@@ -41,27 +40,9 @@ public class Player : MonoBehaviour
         GameManager.instance.swamp1.true_speed = speed;
         GameManager.instance.swamp2.true_speed = speed;
         GameManager.instance.swamp3.true_speed = speed;
-        //lava 속도 초기값 설정
-        GameManager.instance.lava0.player_speed = speed;
-        GameManager.instance.lava1.player_speed = speed;
-        GameManager.instance.lava2.player_speed = speed;
-        GameManager.instance.lava3.player_speed = speed;
-        GameManager.instance.lava0.true_speed = speed;
-        GameManager.instance.lava1.true_speed = speed;
-        GameManager.instance.lava2.true_speed = speed;
-        GameManager.instance.lava3.true_speed = speed;
-        */
+
     }
-    private void Start()
-    {
-        originalSpeed = speed;
-        currentSpeed = speed;
-    }
-    public void SetSpeed(float newSpeed)//swamp, lava 참조 함수
-    {
-        speed = newSpeed;
-        currentSpeed = speed;
-    }
+
 
     void Update()
     {
@@ -122,20 +103,16 @@ public class Player : MonoBehaviour
 
     }
 
+    public void SetSpeed()
+    {
 
+    }
     public void ApplyLavaEffect()
     {
-        //Lava에 영향을 받음
-        float lavaSpeedReduction = GameManager.instance.LavaSpeedReduction;
-        float newSpeed = originalSpeed - lavaSpeedReduction;
-        SetSpeed(newSpeed);
 
         Debug.Log("hot");
-        GameManager.instance.TakeDamage(0.5f);
+        GameManager.instance.TakeDamage(0.2f);
     }
-    public void RemoveLavaEffect()
-    {
-        SetSpeed(originalSpeed);
-    }
+
 
 }
