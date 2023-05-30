@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SwampGameScene.unity
     guid: 2e285696b833e2d40aa89236fd2af2bc
+  - enabled: 1
+    path: Assets/Scenes/HellGameScene.unity
+    guid: b90d9609d88731b49b7dd7ed4b42ecd1
   m_configObjects: {}

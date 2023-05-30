@@ -31,6 +31,11 @@ public class GameManager : MonoBehaviour
     public Swamp swamp1;
     public Swamp swamp2;
     public Swamp swamp3;
+    public Lava lava0;
+    public Lava lava1;
+    public Lava lava2;
+    public Lava lava3;
+    [SerializeField]private float lavaSpeedReduction = 1.5f;//Lava로 인한 속도 감소량
 
     void Awake()
     {
@@ -118,6 +123,41 @@ public class GameManager : MonoBehaviour
             exp = 0;
             uiLevelUp.Show();
         }
+    }
+    public void ApplyLavaEffectToPlayer()
+    {
+        Player player = FindObjectOfType <Player>();
+        if(player != null)
+        {
+            player.ApplyLavaEffect();
+        }
+    }
+    public void RemoveLavaEffectFromPlayer()
+    {
+        Player player = FindObjectOfType<Player>();
+        if (player != null)
+        {
+            player.RemoveLavaEffect();
+        }
+    }
+    public void TakeDamage(float damageAmount)//지속 데미지
+    {
+        if(!isLive) 
+            return;
+
+        health -= damageAmount;
+
+        if(health <= 0)
+        {
+            health = 0;
+            GameOver();
+        }
+
+    }
+    public float LavaSpeedReduction
+    {
+        get { return lavaSpeedReduction; }
+        set { lavaSpeedReduction = value; }
     }
 
     // 레벨업시 시간정지

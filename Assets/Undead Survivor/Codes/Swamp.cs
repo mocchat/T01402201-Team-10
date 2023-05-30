@@ -13,7 +13,7 @@ public class Swamp : MonoBehaviour
         {
 
             true_speed = player_speed - 1.5f;
-            GameManager.instance.player.speed = true_speed;
+            collision.GetComponent<Player>().SetSpeed(true_speed);
         }
 
     }
@@ -24,7 +24,7 @@ public class Swamp : MonoBehaviour
         {
 
             true_speed = player_speed;
-            GameManager.instance.player.speed = player_speed;
+            collision.GetComponent<Player>().SetSpeed(player_speed);
         }
     }
 }
