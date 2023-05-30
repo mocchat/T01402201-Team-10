@@ -73,13 +73,13 @@ public class Gear : MonoBehaviour
     {
         float speed = 3 * Character.Speed;
 
-        /* swamp에 속도업정보 보내기
+       
         GameManager.instance.swamp.player_speed = speed + speed * rate;
         GameManager.instance.swamp1.player_speed = speed + speed * rate;
         GameManager.instance.swamp2.player_speed = speed + speed * rate;
         GameManager.instance.swamp3.player_speed = speed + speed * rate;
         GameManager.instance.player.speed = speed + speed * rate;
-        */
+        
     }
 
 
