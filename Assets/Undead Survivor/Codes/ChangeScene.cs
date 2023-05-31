@@ -27,6 +27,9 @@ public class ChangeScene : MonoBehaviour
             case "HellMap":
                 SceneManager.LoadScene("HellGrounScene");
                 break;
+            case "BossMap":
+                SceneManager.LoadScene("BossMap1");
+                break;
                 // case " Option":
                 //      SceneManager.LoadScene();
                 //   break;
