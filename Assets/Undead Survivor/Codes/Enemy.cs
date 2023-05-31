@@ -8,6 +8,8 @@ public class Enemy : MonoBehaviour
     public float speed;
     public float health;
     public float maxHealth;
+    public float timer;
+    public bool dead_timer;
     public RuntimeAnimatorController[] animCon;
     public Rigidbody2D target;
 
@@ -60,6 +62,8 @@ public class Enemy : MonoBehaviour
         spriter.sortingOrder = 2;
         anim.SetBool("Dead", false);
         health = maxHealth;
+        dead_timer = false;
+        timer = 0;
     }
 
     public void Init(SpawnData data) {
@@ -90,8 +94,9 @@ public class Enemy : MonoBehaviour
             anim.SetBool("Dead", true);
             GameManager.instance.kill++;
             GameManager.instance.GetExp();
+            dead_timer = true;
 
-            if(GameManager.instance.isLive)//언데드 사망 사운드는 게임 종료 시에는 나지 않도록 조건 추가
+            if (GameManager.instance.isLive)//언데드 사망 사운드는 게임 종료 시에는 나지 않도록 조건 추가
                 AudioManager.instance.PlaySfx(AudioManager.Sfx.Dead);
         }
     }
@@ -106,5 +111,17 @@ public class Enemy : MonoBehaviour
 
     void Dead() {
         gameObject.SetActive(false);
+    }
+
+    void Update()
+    {
+        if (dead_timer == true)
+        {
+            timer = timer + Time.deltaTime;
+            if (timer > 3)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 }
