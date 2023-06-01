@@ -73,6 +73,43 @@ public class Reposition : MonoBehaviour
                     transform.parent.Translate(Vector3.up * dirY * 40);
                 }
                 break;
+            case "Ice":
+                diffx = playerPos.x - myPos.x;
+                diffy = playerPos.y - myPos.y;
+                dirX = diffx < 0 ? -1 : 1;
+                dirY = diffy < 0 ? -1 : 1;
+                diffx = Mathf.Abs(diffx);
+                diffy = Mathf.Abs(diffy);
+
+                if (diffx > diffy)
+                {
+                    transform.parent.Translate(Vector3.right * dirX * 40);
+                }
+                else if (diffx < diffy)
+                {
+                    transform.parent.Translate(Vector3.up * dirY * 40);
+                }
+
+                break;
+
+            case "Snow":
+                diffx = playerPos.x - myPos.x;
+                diffy = playerPos.y - myPos.y;
+                dirX = diffx < 0 ? -1 : 1;
+                dirY = diffy < 0 ? -1 : 1;
+                diffx = Mathf.Abs(diffx);
+                diffy = Mathf.Abs(diffy);
+
+                if (diffx > diffy)
+                {
+                    transform.parent.Translate(Vector3.right * dirX * 40);
+                }
+                else if (diffx < diffy)
+                {
+                    transform.parent.Translate(Vector3.up * dirY * 40);
+                }
+                break;
+
             case "Enemy":
                 if (coll.enabled)
                 {

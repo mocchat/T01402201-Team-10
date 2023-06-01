@@ -13,6 +13,7 @@ TagManager:
   - Lava
   - Ice
   - Snow
+  - Trap
   layers:
   - Default
   - TransparentFX

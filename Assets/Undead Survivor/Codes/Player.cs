@@ -109,7 +109,10 @@ public class Player : MonoBehaviour
         if(collision.transform.tag == "Enemy")
             GameManager.instance.health -= Time.deltaTime * 10;
 
-        if(GameManager.instance.health < 0)
+        if (collision.transform.tag == "Trap")
+            GameManager.instance.health -= Time.deltaTime * 10;
+
+        if (GameManager.instance.health < 0)
         {
             for ( int index = 2; index < transform.childCount; index++)
             {

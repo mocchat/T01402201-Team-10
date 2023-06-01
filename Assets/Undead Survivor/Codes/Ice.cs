@@ -20,9 +20,9 @@ public class Ice : MonoBehaviour
             Debug.Log("enter");
 
             Debug.Log("Cold");
-            GameManager.instance.TakeDamage(2f);
+            GameManager.instance.TakeDamage(0.1f);
 
-            true_speed = player_speed + 5f;
+            true_speed = player_speed + 2f;
             GameManager.instance.player.speed = true_speed;
         }
     }
