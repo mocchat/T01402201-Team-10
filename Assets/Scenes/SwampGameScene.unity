@@ -13145,6 +13145,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &974939851 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2992554981502246072, guid: 8228216902b0b5e43b4405d9c6eb5ac5, type: 3}
+  m_PrefabInstance: {fileID: 1203374413}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e77fcdcd545064a46876f998128f85ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &995828197 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 428119720577970005, guid: 8228216902b0b5e43b4405d9c6eb5ac5, type: 3}
@@ -13908,7 +13919,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 10.138889
+  orthographic size: 12.305555
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -92117,14 +92128,14 @@ MonoBehaviour:
   swamp1: {fileID: 580221444}
   swamp2: {fileID: 1869069970}
   swamp3: {fileID: 1622672809}
-  lava0: {fileID: 0}
-  lava1: {fileID: 0}
-  lava2: {fileID: 0}
-  lava3: {fileID: 0}
-  ice1: {fileID: 0}
-  ice2: {fileID: 0}
-  ice3: {fileID: 0}
-  ice4: {fileID: 0}
+  lava0: {fileID: 974939851}
+  lava1: {fileID: 974939851}
+  lava2: {fileID: 974939851}
+  lava3: {fileID: 974939851}
+  ice1: {fileID: 1399498006}
+  ice2: {fileID: 1399498006}
+  ice3: {fileID: 1399498006}
+  ice4: {fileID: 1399498006}
 --- !u!4 &2104666092
 Transform:
   m_ObjectHideFlags: 0

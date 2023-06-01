@@ -2008,7 +2008,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 7.5
+  orthographic size: 12.305555
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2660,6 +2660,10 @@ MonoBehaviour:
   lava1: {fileID: 8683390268860175568}
   lava2: {fileID: 8683390268860175568}
   lava3: {fileID: 8683390268860175568}
+  ice1: {fileID: 1329126698}
+  ice2: {fileID: 1329126698}
+  ice3: {fileID: 1329126698}
+  ice4: {fileID: 1329126698}
 --- !u!4 &692023134
 Transform:
   m_ObjectHideFlags: 0
@@ -8537,6 +8541,7 @@ MonoBehaviour:
   - {fileID: 22100000, guid: 256b1aa26cc3afd47848a5dd6928c752, type: 2}
   - {fileID: 22100000, guid: 8f0f6d5cd530ebd4aa34dce181adaff9, type: 2}
   isOnLava: 0
+  isOnIce: 0
 --- !u!114 &1887836647
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -99,9 +99,9 @@ GameObject:
   - component: {fileID: 3468659852595495965}
   - component: {fileID: 1305898092352435921}
   - component: {fileID: 9087873254778120692}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Flyingeye
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -259,6 +259,8 @@ MonoBehaviour:
   speed: 0
   health: 0
   maxHealth: 0
+  timer: 0
+  dead_timer: 0
   animCon:
   - {fileID: 22100000, guid: 9fb4c0e94f863834e8d8a1c8865b9886, type: 2}
   target: {fileID: 0}
