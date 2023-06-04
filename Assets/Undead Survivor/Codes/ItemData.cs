@@ -8,7 +8,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Item", menuName = "Scriptble object/ItemData")]  //Scriptble Object : 다양한 데이터를 저장하는 에셋(Data폴더에 있는 오브젝트)
 public class ItemData : ScriptableObject
 {
-    public enum ItemType { Melee, Range, Glove, Shoe, Heal, Sickle } // Sickle 추가
+    public enum ItemType { Melee, Range, Glove, Shoe, Heal, Sickle, Shotgun } // Sickle, shotgun 추가
 
     // 아이템의 각종 속성들을 변수로 작성하기
     [Header("# Main Info")]

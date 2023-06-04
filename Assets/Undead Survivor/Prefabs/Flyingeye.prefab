@@ -263,4 +263,5 @@ MonoBehaviour:
   dead_timer: 0
   animCon:
   - {fileID: 22100000, guid: 9fb4c0e94f863834e8d8a1c8865b9886, type: 2}
+  - {fileID: 22100000, guid: 12cfc8b2360c2fc4499d4f6f6607671a, type: 2}
   target: {fileID: 0}

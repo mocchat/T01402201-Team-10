@@ -25,7 +25,7 @@ public class ChangeScene : MonoBehaviour
                 SceneManager.LoadScene("SwampGameScene");
                 break;
             case "HellMap":
-                SceneManager.LoadScene("HellGrounScene");
+                SceneManager.LoadScene("HellGameScene");
                 break;
             case "BossMap":
                 SceneManager.LoadScene("BossMap1");

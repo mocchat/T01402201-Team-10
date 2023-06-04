@@ -32,12 +32,13 @@ public class Weapon : MonoBehaviour
                 transform.Rotate(Vector3.back * speed * Time.deltaTime);
                 break;
             case 1:
+            case 6:
                 timer += Time.deltaTime;
 
                 if (timer > speed)
                 {
                     timer = 0f;
-                    Fire();
+                    Fire(id);
                 }
                 break;
             case 5:
@@ -135,7 +136,7 @@ public class Weapon : MonoBehaviour
             bullet.GetComponent<Bullet>().Init(damage, -100, Vector3.zero); // -100 은 무한 관통
         }
     }
-    void Fire() {
+    void Fire(int id) {
         if (!player.scanner.nearestTarget)
             return;
         // 총알이 나아가고자 하는 방향 설정
@@ -144,10 +145,24 @@ public class Weapon : MonoBehaviour
         dir = dir.normalized;
 
         // 위치와 회전 결정
-        Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
-        bullet.position = transform.position;
-        bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir); // FromToRotation: 지정된 축을 중심으로 목표를 향해 회전하는 함수
-        bullet.GetComponent<Bullet>().Init(damage, count, dir);
+        if (id == 1) // 엽총
+        {
+            Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
+            bullet.position = transform.position;
+            bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir); // FromToRotation: 지정된 축을 중심으로 목표를 향해 회전하는 함수
+            bullet.GetComponent<Bullet>().Init(damage, count, dir);
+        } else if (id == 6) // 산탄총
+        {
+            Transform[] bullet = new Transform[3];
+            for (int i = 0; i < 3; i++)
+            {
+                Vector3 newDirection = Quaternion.AngleAxis(-20 + (i*20), Vector3.forward) * dir;
+                bullet[i] = GameManager.instance.pool.Get(prefabId).transform;
+                bullet[i].position = transform.position;
+                bullet[i].rotation = Quaternion.FromToRotation(Vector3.up, newDirection); // FromToRotation: 지정된 축을 중심으로 목표를 향해 회전하는 함수
+                bullet[i].GetComponent<Bullet>().Init(damage, count, newDirection);
+            }
+        }
 
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Range);
     }
