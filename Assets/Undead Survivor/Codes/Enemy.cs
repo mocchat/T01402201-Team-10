@@ -120,7 +120,7 @@ public class Enemy : MonoBehaviour
             timer = timer + Time.deltaTime;
             if (timer > 3)
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
             }
         }
     }

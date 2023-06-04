@@ -12,6 +12,7 @@ public class Weapon : MonoBehaviour
     public float speed;
 
     float timer;
+    float S_timer;
     Player player;
 
     void Awake() {
@@ -25,21 +26,32 @@ public class Weapon : MonoBehaviour
         if (!GameManager.instance.isLive)
             return;
 
-        switch (id) {
+        switch (id)
+        {
             case 0:
                 transform.Rotate(Vector3.back * speed * Time.deltaTime);
                 break;
-            default:
+            case 1:
                 timer += Time.deltaTime;
 
-                if (timer > speed) {
+                if (timer > speed)
+                {
                     timer = 0f;
                     Fire();
                 }
                 break;
+            case 5:
+                S_timer += Time.deltaTime;
+                if (S_timer > speed * 5)
+                {
+                    S_timer = 0f;
+                    sickle();
+                }
+                break;
         }
         // .. Test Code
-        if (Input.GetButtonDown("Jump")) {
+        if (Input.GetButtonDown("Jump"))
+        {
             LevelUp(10, 1);
         }
     }
@@ -89,9 +101,12 @@ public class Weapon : MonoBehaviour
         }
 
         // Hand Set
-        Hand hand = player.hands[(int)data.itemType];
-        hand.spriter.sprite = data.hand;
-        hand.gameObject.SetActive(true);
+        if (id != 5)
+        {
+            Hand hand = player.hands[(int)data.itemType];
+            hand.spriter.sprite = data.hand;
+            hand.gameObject.SetActive(true);
+        }
 
 
 
@@ -133,6 +148,23 @@ public class Weapon : MonoBehaviour
         bullet.position = transform.position;
         bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir); // FromToRotation: 지정된 축을 중심으로 목표를 향해 회전하는 함수
         bullet.GetComponent<Bullet>().Init(damage, count, dir);
+
+        AudioManager.instance.PlaySfx(AudioManager.Sfx.Range);
+    }
+
+    void sickle() // 기본적으로 fire 함수랑 비슷. count 부분만 다르게 Bullet에 전달
+    {
+        if (!player.scanner.nearestTarget)
+            return;
+        Vector3 targetPos = player.scanner.nearestTarget.position;
+        Vector3 dir = targetPos - transform.position;
+        dir = dir.normalized;
+
+
+        Transform bullet = GameManager.instance.pool.Get(prefabId).transform;
+        bullet.position = transform.position;
+        bullet.rotation = Quaternion.FromToRotation(Vector3.up, dir); 
+        bullet.GetComponent<Bullet>().Init(damage, 100 + count, dir);
 
         AudioManager.instance.PlaySfx(AudioManager.Sfx.Range);
     }
