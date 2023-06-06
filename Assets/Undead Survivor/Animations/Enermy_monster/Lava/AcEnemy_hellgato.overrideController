@@ -7,7 +7,7 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: AcEnemy_hellgato
-  m_Controller: {fileID: 9100000, guid: 657d65cb6739ec441bed3ec91264058e, type: 2}
+  m_Controller: {fileID: 9100000, guid: f2855d618fc8d9c499189d3f39b9cbbc, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: bb6aa34a692c0f649b221cee2e9aac1b, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: 922fe0f03c68a364e9c4c782c8ca33fc, type: 2}

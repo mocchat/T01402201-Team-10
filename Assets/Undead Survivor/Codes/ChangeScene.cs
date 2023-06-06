@@ -9,6 +9,9 @@ public class ChangeScene : MonoBehaviour
     {
         switch (this.gameObject.name)
         {
+            case "Producer":
+                SceneManager.LoadScene("Producer");
+                break;
             case "Start":
                 SceneManager.LoadScene("MapChoose");
                 break;
@@ -30,10 +33,6 @@ public class ChangeScene : MonoBehaviour
             case "BossMap":
                 SceneManager.LoadScene("BossMap1");
                 break;
-            case " Producer":
-                SceneManager.LoadScene("Producer");
-                break;
-
         }
     }
 

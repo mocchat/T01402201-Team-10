@@ -9943,7 +9943,15 @@ MonoBehaviour:
   - spawnTime: 0.6
     spriteType: 1
     health: 25
-    speed: 2.4
+    speed: 2
+  - spawnTime: 0.7
+    spriteType: 2
+    health: 30
+    speed: 2.6
+  - spawnTime: 0.8
+    spriteType: 3
+    health: 50
+    speed: 2
   levelTime: 0
 --- !u!1 &2047029882
 GameObject:
