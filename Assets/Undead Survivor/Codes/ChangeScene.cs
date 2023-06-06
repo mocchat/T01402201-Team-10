@@ -30,8 +30,8 @@ public class ChangeScene : MonoBehaviour
             case "BossMap":
                 SceneManager.LoadScene("BossMap1");
                 break;
-            case " Option":
-                SceneManager.LoadScene("Option_A");
+            case " Producer":
+                SceneManager.LoadScene("Producer");
                 break;
 
         }

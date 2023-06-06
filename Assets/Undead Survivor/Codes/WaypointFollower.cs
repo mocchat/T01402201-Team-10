@@ -16,8 +16,9 @@ public class WaypointFollower : MonoBehaviour
 
         if (Vector2.Distance(waypoints[currentWaypointIndex].transform.position, transform.position) < .1f)
         {
-            currentWaypointIndex++;
             transform.rotation = Quaternion.Euler(0, 180, 0);
+            currentWaypointIndex++;
+            
             if ( currentWaypointIndex >= waypoints.Length)
             {
                

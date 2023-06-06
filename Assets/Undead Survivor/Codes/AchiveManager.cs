@@ -8,6 +8,7 @@ public class AchiveManager : MonoBehaviour
     //업적 데이터 관리(저장, 불러오기) -골드메탈 뱀서라이크14+참고
     public GameObject[] lockCharacter;
     public GameObject[] unlockCharacter;
+
     public GameObject uiNotice;
     enum Achive {UnlockPotato, UnlockBean}
     Achive[] achives;//업적 데이터들을 저장해둘 배열 선언 및 초기화
@@ -53,6 +54,7 @@ public class AchiveManager : MonoBehaviour
             unlockCharacter[index].SetActive(isUnlock);
         }
     }
+
     void LateUpdate()
     {
         foreach(Achive achive in achives)
@@ -74,6 +76,7 @@ public class AchiveManager : MonoBehaviour
             case Achive.UnlockBean:
                 isAchive = GameManager.instance.gameTime == GameManager.instance.maxGameTime;
                 break;
+            
         }
 
         if(isAchive && PlayerPrefs.GetInt(achive.ToString()) == 0) //해당 업적이 처음 달성 했다는 조건, 해금 안되어있을때
