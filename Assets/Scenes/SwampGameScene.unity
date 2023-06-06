@@ -14315,7 +14315,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 7.5
+  orthographic size: 8.222222
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -14456,7 +14456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabs:
-  - {fileID: 4070596015990408528, guid: 970cbbe72b1e1d44ea07eef114b313a1, type: 3}
+  - {fileID: 5574385672031078141, guid: 176383b520b07ad4080e7360478a31e4, type: 3}
   - {fileID: 6163086192413370572, guid: ac152c95c8d235a4a8319f864ea43bca, type: 3}
   - {fileID: 4612905106903865439, guid: f863304a232e5b6439066d7d16a5bc01, type: 3}
   - {fileID: 4612905106903865439, guid: 0ba55591ef69bc740a4c14e57e02c5ba, type: 3}
@@ -93121,9 +93121,17 @@ MonoBehaviour:
     spriteType: 0
     health: 10
     speed: 1.5
-  - spawnTime: 0.2
+  - spawnTime: 0.4
     spriteType: 1
     health: 15
+    speed: 2.4
+  - spawnTime: 0.4
+    spriteType: 2
+    health: 15
+    speed: 2.4
+  - spawnTime: 0.7
+    spriteType: 3
+    health: 30
     speed: 2.4
   levelTime: 0
 --- !u!1 &2104666090
@@ -93157,7 +93165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLive: 1
   gameTime: 0
-  maxGameTime: 300
+  maxGameTime: 100
   playerId: 0
   health: 0
   maxHealth: 100

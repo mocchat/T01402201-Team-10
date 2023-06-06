@@ -261,7 +261,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabs:
-  - {fileID: 8816176246859010706, guid: 3dff4ab7a66e54c4bbd894f79ea72288, type: 3}
+  - {fileID: 4070596015990408528, guid: 76937e4a48de01d43878544390e71c38, type: 3}
+  - {fileID: 5574385672031078141, guid: 5b85b14a21efec34090187fc83a8b922, type: 3}
   - {fileID: 6163086192413370572, guid: ac152c95c8d235a4a8319f864ea43bca, type: 3}
   - {fileID: 4612905106903865439, guid: f863304a232e5b6439066d7d16a5bc01, type: 3}
   - {fileID: 4612905106903865439, guid: 0ba55591ef69bc740a4c14e57e02c5ba, type: 3}
@@ -2628,7 +2629,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 7.5
+  orthographic size: 10.138889
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -9935,13 +9936,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: []
   spawnData:
-  - spawnTime: 0.7
+  - spawnTime: 0.6
     spriteType: 0
     health: 10
     speed: 1.5
-  - spawnTime: 0.2
+  - spawnTime: 0.6
     spriteType: 1
-    health: 15
+    health: 25
     speed: 2.4
   levelTime: 0
 --- !u!1 &2047029882
@@ -10538,7 +10539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLive: 1
   gameTime: 0
-  maxGameTime: 300
+  maxGameTime: 100
   playerId: 0
   health: 0
   maxHealth: 100
