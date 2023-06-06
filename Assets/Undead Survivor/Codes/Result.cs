@@ -6,12 +6,12 @@ public class Result : MonoBehaviour
 {
     public GameObject[] titles;
 
-    public void Lose()
+    public void Win()
     {
         titles[0].SetActive(true);
     }
 
-    public void Win()
+    public void Lose()
     {
         titles[1].SetActive(true);
     }
