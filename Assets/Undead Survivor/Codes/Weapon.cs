@@ -156,7 +156,7 @@ public class Weapon : MonoBehaviour
             Transform[] bullet = new Transform[3];
             for (int i = 0; i < 3; i++)
             {
-                Vector3 newDirection = Quaternion.AngleAxis(-20 + (i*20), Vector3.forward) * dir;
+                Vector3 newDirection = Quaternion.AngleAxis(Random.Range(-20, 20), Vector3.forward) * dir;
                 bullet[i] = GameManager.instance.pool.Get(prefabId).transform;
                 bullet[i].position = transform.position;
                 bullet[i].rotation = Quaternion.FromToRotation(Vector3.up, newDirection); // FromToRotation: 지정된 축을 중심으로 목표를 향해 회전하는 함수
