@@ -43,7 +43,6 @@ public class Enemy : MonoBehaviour
         rigid.MovePosition(rigid.position + nextVec);
         rigid.velocity = Vector2.zero;
     }
-
     void LateUpdate()
     {
         if (!GameManager.instance.isLive)
@@ -51,7 +50,7 @@ public class Enemy : MonoBehaviour
 
         if (!isLive)
             return;
-        spriter.flipX = target.position.x < rigid.position.x;   
+        spriter.flipX = target.position.x < rigid.position.x;
     }
 
     void OnEnable() {
@@ -106,7 +105,7 @@ public class Enemy : MonoBehaviour
 
         Vector3 playerPos = GameManager.instance.player.transform.position;
         Vector3 dirVec = transform.position - playerPos;
-        rigid.AddForce(dirVec.normalized * 3, ForceMode2D.Impulse);
+        rigid.AddForce(dirVec.normalized * 2, ForceMode2D.Impulse);
     }
 
     void Dead() {

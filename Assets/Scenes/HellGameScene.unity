@@ -2629,7 +2629,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 7.5
+  orthographic size: 9.388889
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -10547,7 +10547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLive: 1
   gameTime: 0
-  maxGameTime: 100
+  maxGameTime: 20
   playerId: 0
   health: 0
   maxHealth: 100
