@@ -8564,15 +8564,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8245010c21650a246bc3a6d2e5877a5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetSceneName: BossMap1
   isLive: 1
   gameTime: 0
   maxGameTime: 100
   playerId: 0
   health: 0
   maxHealth: 100
-  level: 5
+  level: 0
   kill: 0
-  exp: 280
+  exp: 0
   nextExp: 03000000050000000a0000001e0000003c0000006400000096000000d20000001801000068010000c201000058020000
   pool: {fileID: 959269443}
   player: {fileID: 547931083}

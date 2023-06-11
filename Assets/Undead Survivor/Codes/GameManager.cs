@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public string targetSceneName = "BossMap1";
     public static GameManager instance;
     [Header("# Game Control")]
     public bool isLive;
@@ -45,7 +46,8 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
     }
- 
+
+
     public void GameStart(int id)
     {
         playerId = id;
@@ -108,6 +110,14 @@ public class GameManager : MonoBehaviour
 
         gameTime += Time.deltaTime;
 
+        string currentScene = SceneManager.GetActiveScene().name;
+        if (currentScene==targetSceneName)
+        {
+            if(gameTime <= 6f)
+            {
+                GetExp();
+            }
+        }
         if (gameTime > maxGameTime) {
             gameTime = maxGameTime;
             GameVictory();
@@ -119,7 +129,7 @@ public class GameManager : MonoBehaviour
         if (!isLive)
             return;
 
-        exp++;
+        exp ++;
         
         if (exp == nextExp[Mathf.Min(level, nextExp.Length-1)])   //Min함수로 최고 경험치를 그대로 사용하도록 변경
         {
